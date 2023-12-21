@@ -1,20 +1,23 @@
-import './App.css';
-import Login from './components/Login';
-import Signup from './components/SignUp';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-// import Login from './components/Login';
+import Footer from './components/Footer';
+import Nav from './components/Nav';
+import About from './Pages/About';
+import Home from './Pages/Home';
+import Login from './Pages/Login';
+import Signup from './Pages/Signup';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    
-     <BrowserRouter>
+    <>
+    <Nav/>
      <Routes>
-      <Route path="/" element={<Signup/>}/>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/signup" element={<Signup/>}/>
       <Route path="/login" element={<Login/>}/>
      </Routes>
-     </BrowserRouter>
-
-
+     <Footer/>
+     </>
+  
   );
 }
 
